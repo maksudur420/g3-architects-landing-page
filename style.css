@@ -21,6 +21,10 @@
     line-height: 26px;
     font-size: 1rem;
 }
+.common-heading{
+    color: #131313;
+    font-size: 2.8rem;
+}
 /* Style Banner Section */
 header{
     background: rgba(255, 144, 14, 0.10);
@@ -41,10 +45,6 @@ nav li{
 nav li a{
     color: #424242;
     text-decoration: none;
-}
-.header-title{
-    color: #131313;
-    font-size: 2.8rem;
 }
 .banner-info{
     width: 80%;
@@ -74,7 +74,7 @@ nav li a{
 .team-images{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 24px;
+    gap: 1.5rem;
     width: 38%;
 }
 .img-size{
@@ -100,13 +100,49 @@ nav li a{
     font-size: 2.8rem;
     font-weight: 700;
 }
+.fact-info{
+    padding: 50px;
+}
+.fact-container-card {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 124px;
+    padding: 0 50px;
+}
+.fact-container-card .facts-cards{
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    text-align: center;
+    padding: 30px 0px;
+}
+.fact-container-card img{
+    width: 45px;
+}
+.facts-num{
+    color:#424242;
+    text-align: center;
+    font-family: Work Sans;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.fact-container-card .card-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #727272;
+    padding: 5px;
+}
+.feature{
+    display: flex;
+}
 
 /* Responsoive Design Media Query for Mobile verson */
 @media screen and (max-width:576px) {
     header{
         padding: 20px;
     }
-    nav{
+    nav,.team-section{
         flex-direction: column;
     }
     .header-title{
@@ -115,16 +151,21 @@ nav li a{
     .banner-info{
         width: 100%;
     }
-    .team-section{
-        flex-direction: column;
-    }
     .team-images{
         grid-template-columns: 1fr;
         width: 100%;
+        margin-bottom: 20px;
     }
     .team-content{
-        padding: 0;
+        padding:0px;
         width: 100%;
+    }
+    .fact-container-card{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .fact-info,.fact-container-card{
+        padding: 10px;
     }
 }
 /* media query for tablet version */
@@ -132,7 +173,7 @@ nav li a{
     header{
         padding: 30px;
     }
-    nav{
+    nav,.team-section{
         flex-direction: column;
     }
     .header-title{
@@ -141,7 +182,16 @@ nav li a{
     .banner-info{
         width: 90%;
     }
-    .team-section{
-        flex-direction: column;
+    .team-images{
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .team-content{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .fact-container-card{
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
     }
 }
