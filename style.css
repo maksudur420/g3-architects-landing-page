@@ -41,7 +41,7 @@ nav li a{
     font-size: 2.8rem;
 }
 .banner-info{
-    width: 800px;
+    width: 80%;
     text-align: center;
     margin: 50px auto;
 }
@@ -63,4 +63,33 @@ nav li a{
 
 
 
-/* Responsoive Design Media Query */
+/* Responsoive Design Media Query for Mobile verson */
+@media screen and (max-width:576px) {
+    header{
+        padding: 20px;
+    }
+    nav{
+        flex-direction: column;
+    }
+    .header-title{
+        font-size: 2rem;
+    }
+    .banner-info{
+        width: 100%;
+    }
+}
+/* media query for tablet version */
+@media screen and (min-width:576px) and (max-width:980px) {
+    header{
+        padding: 30px;
+    }
+    nav{
+        flex-direction: column;
+    }
+    .header-title{
+        font-size: 2.2rem;
+    }
+    .banner-info{
+        width: 90%;
+    }
+}
